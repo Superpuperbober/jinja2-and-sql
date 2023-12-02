@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title> Дамп базы данных </title>
+        {% from "macros.html" import render_table %}
+        {% from "select_macros.html" import render_select %}
+        {% from "input_macros.html" import render_input %}
+    </head>
+    <body>
+        {{render_select(df_genre, "genre_id", genre_id, "name_genre") }}
+        {{render_input(min_price,max_price)}}
+        {{render_table("Данные", df_request)}}
+    </body>
+</html>
